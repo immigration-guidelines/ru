@@ -1,0 +1,49 @@
+Russia - published administrative guidance on immigration case handling
+Checked 2026-11-15.
+
+Result: nothing downloaded. What exists in public is a set of registered legal acts of the
+Ministry of Internal Affairs (MVD), whose Main Directorate for Migration (GUVM) and territorial
+bodies decide visas, invitations, temporary residence and residence permits, work permits and
+patents, migration registration, refugee status and temporary asylum, citizenship, expulsion
+and entry bans. They are of two sorts:
+- administrative regulations ("административный регламент") of each state service, which lay
+  down every step, deadline, responsible official and ground for refusal; and
+- organisational instructions approved by order ("инструкция об организации деятельности",
+  "об организации работы"), e.g. order 952/2025 on deciding refugee and temporary-asylum
+  applications, order 623/2019 on deciding citizenship applications, 862/2024 on the
+  expulsion regime, 435/2026 on entry bans.
+Both are registered with the Ministry of Justice and officially published: procedural acts,
+not guidance. 19 of them, the current ones for foreigners' and citizenship cases, are listed in
+not-obtained.tsv with their publication numbers. Methodological letters of the GUVM
+(методические рекомендации, указания) are not published on any site that could be reached.
+
+Why nothing was downloaded
+- http://publication.pravo.gov.ru (official publication portal). robots.txt (read
+  2026-11-15) for "*": Disallow /Error /Rss /app /js /images /lib /css /Svg /webfonts
+  /HtmlConstructor /Search /File. Document pages and the authority listings are allowed and
+  were read: /documents/block/foiv010 (MVD, 1,270 acts, 7 pages of 200), plus the sitemap
+  and /documents/federal_authorities/weekly. The PDF of each act is at /file/pdf?eoNumber=...
+  The robots.txt rule "/File" differs from that path only in letter case; it was read as
+  meant to cover the downloads, and no PDF was requested. (If the parent session decides the
+  rule does not apply, download_ru.py fetches all 19 PDFs once the check is relaxed or the
+  rule is removed; the list is complete in the script.)
+- https://мвд.рф (xn--b1aew.xn--p1ai, MVD and GUVM pages): robots.txt request timed out
+  after 90 s; host treated as refusing foreign connections. Nothing seen.
+- http://pravo.gov.ru (consolidated texts, IPS "Законодательство России"): robots.txt
+  request timed out; not used.
+- Commercial legal databases (consultant.ru, garant.ru) are not official sources and were
+  not used.
+
+How much real guidance: none is published. Russian migration procedure is codified in
+detailed administrative regulations and registered instructions; internal methodological
+letters of the GUVM are not public.
+
+Completeness doubts
+- The list covers acts published on the portal from 2015; older FMS-era acts still in force
+  (if any) were not reviewed. The MVD's 2019 citizenship instruction (order 623) was made
+  under the 2002 citizenship law; whether a newer instruction under the 2023 law
+  (No 138-FZ) replaces it was not established.
+- Amending orders were not listed; the portal publishes only original texts, not
+  consolidated versions.
+
+Re-run: python3 download_ru.py
